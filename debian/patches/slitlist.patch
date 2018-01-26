@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## slitlist_patch.dpatch by  <michael@poetters.net>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Patch for using another hide system for slit in bottom right
+
+@DPATCH@
+
+--- fluxbox-1.3.7.orig/src/Slit.cc	2008-09-01 17:59:05.000000000 +0200
++++ fluxbox-1.3.7/src/Slit.cc	2009-02-20 04:06:07.000000000 +0100
+@@ -590,7 +590,7 @@
+     case LEFTCENTER:
+     case RIGHTCENTER:
+     case LEFTBOTTOM:
+-    case RIGHTBOTTOM:
++    case BOTTOMRIGHT:
+         height_inc = true;
+     default:
+         break;
